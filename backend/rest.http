@@ -1,0 +1,21 @@
+### create a new message
+POST http://localhost:4001/message
+Content-Type: application/json
+
+{
+    "message": "Hello World!"
+}
+
+### Delete a message by ID
+DELETE http://localhost:4001/message/123
+
+### Get all messages in the database
+GET http://localhost:4001/message
+
+### Modify an existing message by ID
+PATCH http://localhost:4001/message/456
+Content-Type: application/json
+
+{
+    "message": "Updated message content."
+}
