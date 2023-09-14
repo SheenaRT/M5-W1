@@ -1,20 +1,18 @@
-import { useEffect, useState } from 'react'
+import React from 'react';
+import './App.css';
+import MessageForm from './components/MessageForm';
+import MessageList from './components/MessageList';
+
+
 
 function App() {
-  const [display, setDisplay] = useState([])
-  useEffect(() => {
-    fetch('localhost:4000/')
-    .then(res => res.json())
-    .then(data => setDisplay(data))
-  }, [])
-  
   return (
     <div className="App">
-      <header className='App-header'>
-        <h1>Message to be displayed here</h1>
-      </header>
+      <h1>Message App</h1>
+      <MessageForm />
+      <MessageList />
     </div>
-  )
+  );
 }
 
 export default App;
